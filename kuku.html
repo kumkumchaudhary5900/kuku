@@ -2,9 +2,226 @@
 <html>
 <head>
   <title>Responsive Website with Animations</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
+  
 </head>
 <body>
+  <style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Header */
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .nav-links li {
+    display: inline;
+    margin-left: 20px;
+  }
+  
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #ddd;
+  }
+  
+  /* Hero section */
+  .hero {
+    height: 100vh;
+    background-image: url("https://images.unsplash.com/photo-1496258323453-66eb1c82b82c");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  color: #fff;
+  }
+  
+  .hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  animation: slideIn 1s ease-in-out;
+  }
+  
+  .hero p {
+  font-size: 24px;
+  margin-bottom: 40px;
+  animation: slideIn 1s ease-in-out 0.5s;
+  }
+  
+  .cta-btn {
+  background-color: #fff;
+  color: #333;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease;
+  animation: fadeIn 1s ease-in-out 1s;
+  }
+  
+  .cta-btn:hover {
+  background-color: #ddd;
+  }
+  
+  /* Features section */
+  .features {
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  }
+  
+  .feature-box {
+  margin: 20px;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  flex-basis: 300px;
+  transition: transform 0.3s ease;
+  }
+  
+  .feature-box:hover {
+  transform: translateY(-10px);
+  }
+  
+  .feature-box i {
+  font-size: 48px;
+  margin-bottom: 20px;
+  }
+  
+  .feature-box h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  }
+  
+  .feature-box p {
+  font-size: 16px;
+  }
+  
+  /* Contact section */
+  .contact {
+  padding: 80px 20px;
+  text-align: center;
+  }
+  
+  .contact h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  animation: slideIn 1s ease-in-out;
+  }
+  
+  .contact form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  }
+  
+  .contact input[type="text"],
+  .contact input[type="email"],
+  .contact textarea {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  flex-basis: 300px;
+  transition: transform 0.3s ease;
+  }
+  
+  .contact input[type="text"]:hover,
+  .contact input[type="email"]:hover,
+  .contact textarea:hover {
+  transform: scale(1.05);
+  }
+  
+  .contact button[type="submit"] {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  }
+  
+  .contact button[type="submit"]:hover {
+  background-color: #555;
+  }
+  
+  /* Footer */
+  footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  text-align: center;
+  }
+  
+  @keyframes slideIn {
+  0% {
+  
+  
+  opacity: 0;
+  transform: translateY(-50px);
+  }
+  100% {
+  opacity: 1;
+  transform: translateY(0);
+  }
+  }
+  
+  @keyframes fadeIn {
+  0% {
+  opacity: 0;
+  }
+  100% {
+  opacity: 1;
+  }
+  }
+  
+  </style>
   <header>
     <nav>
       <div class="logo">Logo</div>
